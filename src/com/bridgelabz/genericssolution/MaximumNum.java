@@ -19,7 +19,7 @@ public class MaximumNum {
 	public static void main(String[] args) {
 	
 		Integer n1 = new Integer(22);
-		Integer n2 = new Integer(69);
+		Integer n2 = new Integer(69); 
 		Integer n3 = new Integer(11);
 		
 		MaximumNum mn = new MaximumNum();
