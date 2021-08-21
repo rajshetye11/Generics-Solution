@@ -13,24 +13,39 @@ public class MaximumNumGen <T extends Comparable> {
 
 	}
 	
-	public static <T extends Comparable<T>>void maximumNum(T n1, T n2,T n3,T n4){
-		
+	public static <T extends Comparable >T maximumNum(T n1, T n2,T n3,T n4){
+		T max = n1;
 		if ((n1.compareTo(n2) >= 0) && (n1.compareTo(n3) >= 0) && (n1.compareTo(n4) >= 0))
 		{
             System.out.println( n1 + " is maximum number");
+            max = n1;
 		}
 		else if ((n2.compareTo(n1) >= 0) && (n2.compareTo(n1) >= 0) && (n2.compareTo(n4) >= 0)) 
 		{
 			System.out.println( n2 + " is maximum number");
+			max = n2;
 		}
 		else if ((n3.compareTo(n1) >= 0) && (n3.compareTo(n2) >= 0) && (n3.compareTo(n4) >= 0))
+		{
 			System.out.println( n3 + " is maximum number");
+			max = n3;
+		}
 		else if ((n4.compareTo(n1) >= 0) && (n4.compareTo(n2) >= 0) && (n4.compareTo(n3) >= 0))
+		{
 			System.out.println( n4 + " is maximum number");
+			max = n4;
+		}
+		printMax(n1,n2,n3,n4,max);
+		return max;
 	}
 	
-	public void maximumNum() {
-		maximumNum(n1,n2,n3,n4);
+	public T maximumNum() {
+		return MaximumNumGen.maximumNum(n1, n2, n3,n4);
+		
+	}
+	
+	public static <T> void printMax(T n1,T n2,T n3,T n4,T max) {
+		System.out.println("maximum is :"+max);
 	}
 	
 	public static void main(String[] args) {
